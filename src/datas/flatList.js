@@ -1,4 +1,4 @@
-export const flatList = [
+const flatList = [
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -617,3 +617,5 @@ export const flatList = [
 		]
 	}
 ]
+
+export default flatList
