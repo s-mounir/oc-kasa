@@ -1,23 +1,50 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const CardTitle = styled.span`
-    color: #5843e4;
-    font-size: 22px;
-    font-weight: bold;
+const CardThumb = styled.div`
+    width: 22vw;
+    height: 22vw;
+    position: relative;
 `
+
 const CardImage = styled.img`
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+`
+
+const CardShadow = styled.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 2;
+    border-radius: 10px;
+`
+
+const CardTitle = styled.span`
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    position: absolute;
+    bottom: 5.88%;
+    left: 5.88%;
+    z-index: 3;
 `
 
 function Card({ title, picture }) {
     return (
-        <div>
+        <CardThumb>
             <CardImage src={picture} alt="flat" />
+            <CardShadow></CardShadow>
             <CardTitle>{title}</CardTitle>
-        </div>
+        </CardThumb>
     )
 }
  
