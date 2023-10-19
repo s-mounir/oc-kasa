@@ -12,7 +12,7 @@ const Body = styled.div`
 function About() {
   return (
     <Body>
-      <Banner />
+      <Banner page="About"/>
       <div>
         <Collapse label="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import banner from "../../assets/banner_about.png";
+import banner_about from "../../assets/banner_about.png";
+import banner_homepage from "../../assets/banner_homepage.png";
 
 const BannerDiv = styled.div`
   height: 223px;
@@ -28,11 +29,24 @@ const BannerShadow = styled.div`
   z-index: -1;
 `
 
-function Banner(){
+const BannerText = styled.p`
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 142.6%;
+  color: #FFFFFF;
+`
+
+function Banner(props){
+    const banner = props.page === "About" ? banner_about : banner_homepage;
+    const text = props.page === "Homepage" ? true : false;
+
     return (
         <BannerDiv>
             <BannerImg src={banner} alt=""/>
             <BannerShadow></BannerShadow>
+            {text && <BannerText>Chez vous, partout et ailleurs</BannerText>}
         </BannerDiv>
     )
 }
