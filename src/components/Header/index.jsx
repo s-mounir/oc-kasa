@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors.js'
+import { useContext } from 'react'
+import { NavContext } from '../../utils/context'
 
 const StyledHeader = styled.header`
     height: 17vh;
@@ -29,10 +31,13 @@ const StyledLink = styled(Link)`
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
-    text-decoration: none;
+    text-decoration: ${({ isActive }) => (isActive ? 'underline' : 'none')};
 `
 
 function Header(){
+    const { toggleNav, nav } = useContext(NavContext)
+    console.log(nav)
+
     return (
         <StyledHeader>
             <StyledLogo width="211" height="68" viewBox="0 0 211 68" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,8 +48,8 @@ function Header(){
                 <path d="M106.266 34.4632L84.3497 21.6784L72.1945 14.6376L60.2234 35.5749L60.4076 55.2152L82.1396 68L84.3497 66.703V48.1744L94.1106 30.9428L104.056 36.6866V55.2152L106.266 53.9182V34.4632Z" fill="#FF6060"/>
             </StyledLogo>
             <StyledNav>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/a-propos">A Propos</StyledLink>
+                <StyledLink to="/" isActive={nav === 'homepage'} onClick={() => toggleNav()}>Accueil</StyledLink>
+                <StyledLink to="/a-propos" isActive={nav === 'about'} onClick={() => toggleNav()}>A Propos</StyledLink>
             </StyledNav>
         </StyledHeader>
     )
