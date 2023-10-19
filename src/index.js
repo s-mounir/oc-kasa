@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Flat from './pages/Flat';
 import Header from './components/Header';
-import Error from './components/Error';
+import Error from './pages/Error';
 import Footer from './components/Footer';
 import createGlobalStyle from 'styled-components'
 

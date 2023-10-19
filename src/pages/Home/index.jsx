@@ -60,7 +60,7 @@ function Home() {
   return (
     <Body>
       <Banner>
-        <BannerImg src={banner}/>
+        <BannerImg src={banner} alt=""/>
         <BannerShadow></BannerShadow>
         <BannerText>Chez vous, partout et ailleurs</BannerText>
       </Banner>

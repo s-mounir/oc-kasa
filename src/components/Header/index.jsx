@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import colors from '../../utils/style/colors.js'
 
 const StyledHeader = styled.header`
-    height: 68px;
-    margin: 45px 100px;
+    height: 17vh;
+    margin: 0 100px;
     display: flex;
     flex-direction: row;
     align-items: center;

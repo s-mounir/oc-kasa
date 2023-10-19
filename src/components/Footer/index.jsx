@@ -4,13 +4,15 @@ import colors from '../../utils/style/colors.js'
 
 const StyledFooter = styled.footer`
     width: 100%;
-    height: 209px;
+    height: 17vh;
     background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 24px;
+    position: relative;
+    bottom : 0;
 `
 
 const StyledRights = styled.p`
