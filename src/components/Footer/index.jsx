@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from '../../utils/style/colors.js'
 
 const StyledFooter = styled.footer`
     width: 100%;
-    height: 17vh;
+    height: 200px;
     background-color: #000000;
     display: flex;
     flex-direction: column;

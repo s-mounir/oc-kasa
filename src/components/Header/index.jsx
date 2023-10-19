@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { NavContext } from '../../utils/context'
 
 const StyledHeader = styled.header`
-    height: 17vh;
+    height: 120px;
     margin: 0 100px;
     display: flex;
     flex-direction: row;

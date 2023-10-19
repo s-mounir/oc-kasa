@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const Errordiv = styled.div`
-    height: 66vh;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
