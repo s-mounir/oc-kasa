@@ -8,7 +8,6 @@ import Header from './components/Header';
 import Error from './pages/Error';
 import Footer from './components/Footer';
 import createGlobalStyle from 'styled-components'
-import { NavProvider } from './utils/context'
 
 const GlobalStyle = createGlobalStyle`
   div {
@@ -21,7 +20,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <NavProvider>
         <GlobalStyle/>
         <Header />
         <Routes>
@@ -30,9 +28,7 @@ root.render(
           <Route path="/logement/:flatNumber" element={<Flat />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <Footer />
-      </NavProvider>
-     
+        <Footer />     
     </Router>
   </React.StrictMode>
 )
