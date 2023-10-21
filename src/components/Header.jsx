@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from '../../utils/style/colors.js'
+import colors from '../utils/style/colors.js'
 
 const StyledHeader = styled.header`
     height: 120px;

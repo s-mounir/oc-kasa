@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import banner_about from "../../assets/banner_about.png";
-import banner_homepage from "../../assets/banner_homepage.png";
+import banner_about from "../assets/banner_about.png";
+import banner_homepage from "../assets/banner_homepage.png";
 
 const BannerDiv = styled.div`
   height: 223px;

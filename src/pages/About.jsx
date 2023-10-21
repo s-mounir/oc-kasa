@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Banner from '../../components/Banner';
-import Collapse from '../../components/Collapse';
+import Banner from '../components/Banner';
+import Collapse from '../components/Collapse';
 
 const Body = styled.div`
   margin: 0 100px;

@@ -1,7 +1,7 @@
-import flatList from '../../datas/flatList';
-import Card from '../../components/Card';
+import flatList from '../datas/flatList';
+import Card from '../components/Card';
 import styled from 'styled-components';
-import Banner from '../../components/Banner';
+import Banner from '../components/Banner';
 
 const Body = styled.div`
   margin: 50px 100px;
