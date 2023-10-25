@@ -34,7 +34,7 @@ function Home() {
         {flatList?.map((flat) => (
           <Link key={`flat-${flat.id}`} to={`/logement/${flat.id}`}>
             <Card
-              picture={flat.pictures[0]}
+              picture={flat.cover}
               title={flat.title}
               id={flat.id}
             />

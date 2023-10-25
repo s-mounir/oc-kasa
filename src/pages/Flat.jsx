@@ -15,6 +15,11 @@ function Flat() {
     <div className="App">
       <h1> {flat.title} </h1>
       <h2> {flat.location} </h2>
+      <div>
+        <p>{flat.host.name}</p>
+        <img  src={flat.host.picture} alt="host" />
+      </div>
+      <p>Ratings : {flat.rating}</p>
       {flat.tags.map((tag) => (<div>{tag}</div>))}
       <Collapse label="Description">
           <div>
@@ -23,7 +28,9 @@ function Flat() {
         </Collapse>
         <Collapse label="Equipements">
           <div>
-            <p>{flat.equipments}</p>
+            <ul>
+            {flat.equipments.map((equipment) => (<li>{equipment}</li>))}
+            </ul>
           </div>
         </Collapse>
     </div>
