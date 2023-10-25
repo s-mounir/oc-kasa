@@ -38,12 +38,12 @@ const CardTitle = styled.span`
     z-index: 3;
 `
 
-function Card({ title, picture }) {
+function Card({ title, picture, id }) {
     return (
         <CardThumb>
-            <CardImage src={picture} alt="flat" />
-            <CardShadow></CardShadow>
-            <CardTitle>{title}</CardTitle>
+                <CardImage src={picture} alt="flat" />
+                <CardShadow></CardShadow>
+                <CardTitle>{title}</CardTitle>
         </CardThumb>
     )
 }

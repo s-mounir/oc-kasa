@@ -1,7 +1,10 @@
-import flatList from '../datas/flatList';
-import Card from '../components/Card';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+
+import Card from '../components/Card';
 import Banner from '../components/Banner';
+//import { useFetch } from '../utils/hooks';
+import flatList from '../datas/flatList.json'
 
 const Body = styled.div`
   margin: 50px 100px;
@@ -21,15 +24,22 @@ const CardsContainer = styled.div`
 `
 
 function Home() {
+  //const { data, isLoading, error } = useFetch('../datas/flatList.json')
+  //const flatList = data?.flatList
+
   return (
     <Body>
       <Banner page="Homepage"/>
       <CardsContainer>
-        {flatList.map((flat) => (
-          <Card key={`${flat.id}`}
-            picture={flat.pictures[0]}
-            title={flat.title}
-          />
+        {flatList?.map((flat) => (
+          <Link key={`flat-${flat.id}`} to={`/logement/${flat.id}`}>
+            <Card
+              picture={flat.pictures[0]}
+              title={flat.title}
+              id={flat.id}
+            />
+          </Link>
+          
         ))}
       </CardsContainer>
     </Body>
