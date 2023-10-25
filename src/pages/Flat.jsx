@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom'
+
 import flatList from '../datas/flatList.json'
 import Collapse from '../components/Collapse';
 import Carousel from '../components/Carousel';
+import Star from '../components/Star';
 import Error from './Error';
 
 function Flat() {
@@ -21,7 +23,7 @@ function Flat() {
         <p>{flat.host.name}</p>
         <img src={flat.host.picture} alt="host" />
       </div>
-      <p>Ratings : {flat.rating}</p>
+      <Star rating={flat.rating}/>
       {flat.tags.map((tag) => (<div>{tag}</div>))}
       <Collapse label="Description">
           <div>
