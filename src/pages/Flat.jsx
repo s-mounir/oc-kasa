@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import flatList from '../datas/flatList.json'
 import Collapse from '../components/Collapse';
+import Carousel from '../components/Carousel';
 import Error from './Error';
 
 function Flat() {
@@ -13,11 +14,12 @@ function Flat() {
 
   return (
     <div className="App">
+      <Carousel images={flat.pictures}/>
       <h1> {flat.title} </h1>
       <h2> {flat.location} </h2>
       <div>
         <p>{flat.host.name}</p>
-        <img  src={flat.host.picture} alt="host" />
+        <img src={flat.host.picture} alt="host" />
       </div>
       <p>Ratings : {flat.rating}</p>
       {flat.tags.map((tag) => (<div>{tag}</div>))}
