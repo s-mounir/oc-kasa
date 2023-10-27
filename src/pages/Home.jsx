@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 import Card from '../components/Card';
 import Banner from '../components/Banner';
-//import { useFetch } from '../utils/hooks';
-import flatList from '../datas/flatList.json'
+import { useFetch } from '../utils/hooks';
+//import flatList from '../datas/flatList.json'
 
 const Body = styled.div`
   margin: 50px 100px;
@@ -24,8 +24,8 @@ const CardsContainer = styled.div`
 `
 
 function Home() {
-  //const { data, isLoading, error } = useFetch('../datas/flatList.json')
-  //const flatList = data?.flatList
+  const { data, isLoading, error } = useFetch('./flatList.json')
+  const flatList = data
 
   return (
     <Body>

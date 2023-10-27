@@ -4,17 +4,23 @@ export function useFetch(url) {
     const [data, setData] = useState({})
     const [isLoading, setLoading] = useState(true)
     const [error, setError] = useState(false)
-
+  
     useEffect(() => {
-        fetch('%PUBLIC_URL%/src/datas/flatList.json')
-        .then(function(response){
-            console.log(response)
-            return response.json();
-        })
-        .then(function(myJson) {
-            console.log(myJson);
-        });
+      if (!url) return
+      setLoading(true)
+      async function fetchData() {
+        try {
+          const response = await fetch(url)
+          const data = await response.json()
+          setData(data)
+        } catch (err) {
+          console.log(err)
+          setError(true)
+        } finally {
+          setLoading(false)
+        }
+      }
+      fetchData()
     }, [url]) // tableau de dependance: url; useEffect se lancera dès que l'url changera
-    return { isLoading, data, error}
-}
-
+    return { isLoading, data, error }
+  }

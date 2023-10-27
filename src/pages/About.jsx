@@ -3,7 +3,7 @@ import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
 
 const Body = styled.div`
-  margin: 0 100px;
+  margin: 50px 100px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -12,7 +12,6 @@ const Body = styled.div`
 const TextDiv = styled.div`
   background-color: #F7F7F7;
   border-radius: 0px 0px 5px 5px;
-  margin: -20px 100px 15px 100px;
   padding: 15px;
 `
 
@@ -26,11 +25,18 @@ const Text = styled.p`
   line-height: 142.6%;
 `
 
+const DetailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 30px 100px;
+  gap: 30px;
+`
+
 function About() {
   return (
     <Body>
       <Banner page="About"/>
-      <div>
+      <DetailContainer>
         <Collapse label="Fiabilité">
           <TextDiv>
             <Text>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</Text>
@@ -47,7 +53,7 @@ function About() {
         <Collapse label="Sécurité">
           <TextDiv><Text>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.</Text></TextDiv>
         </Collapse>
-      </div>
+      </DetailContainer>
     </Body>
     
   );
