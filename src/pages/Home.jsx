@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import Card from '../components/Card';
 import Banner from '../components/Banner';
 import { useFetch } from '../utils/hooks';
-//import flatList from '../datas/flatList.json'
-
 const Body = styled.div`
   margin: 50px 100px;
   display: flex;
@@ -24,23 +22,27 @@ const CardsContainer = styled.div`
 `
 
 function Home() {
-  const { data, isLoading, error } = useFetch('./flatList.json')
+  const { data, isLoading, error } = useFetch('/flatList.json')
   const flatList = data
+
+  if (error) {return <div>Il y a un problème avec les données</div>}
 
   return (
     <Body>
       <Banner page="Homepage"/>
       <CardsContainer>
-        {flatList?.map((flat) => (
-          <Link key={`flat-${flat.id}`} to={`/logement/${flat.id}`}>
-            <Card
-              picture={flat.cover}
-              title={flat.title}
-              id={flat.id}
-            />
-          </Link>
-          
-        ))}
+        {isLoading ? (<div>isLoading</div>) : (
+          flatList?.map((flat) => (
+            <Link key={`flat-${flat.id}`} to={`/logement/${flat.id}`}>
+              <Card
+                picture={flat.cover}
+                title={flat.title}
+                id={flat.id}
+              />
+            </Link>
+          ))
+        )}
+        
       </CardsContainer>
     </Body>
   );

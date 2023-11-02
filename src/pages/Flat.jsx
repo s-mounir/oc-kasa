@@ -1,11 +1,10 @@
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components';
 
-//import flatList from '../datas/flatList.json'
+import { useFetch } from '../utils/hooks';
 import Collapse from '../components/Collapse';
 import Carousel from '../components/Carousel';
 import Star from '../components/Star';
-import Error from './Error';
 
 const Body = styled.div`
   margin: 50px 100px;
@@ -96,13 +95,13 @@ const ListDropdown = styled.li`
 
 function Flat() {
   const { flatNumber } = useParams()
-  const flatList = []
-  const flat = flatList.find((data) => data.id === flatNumber);
+  const { data, isLoading, error } = useFetch('/flatList.json')
+  const flatData = data
 
-  console.log(flat)
+  if (isLoading) {return <div>isLoading</div>}
+  else if(error){return <div>Il y a un problème avec les données</div>}
 
-  if (!flat) return <Error />;
-
+  const flat = flatData.find((data) => data.id === flatNumber);
   return (
     <Body>
       <Carousel images={flat.pictures}/>
