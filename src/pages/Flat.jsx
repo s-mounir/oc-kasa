@@ -19,9 +19,6 @@ const InfoContainer = styled.div`
   justify-content: space-between;
 `
 
-const FlatInfo = styled.div`
-`
-
 const FlatTitle = styled.h1`
   font-family: 'Montserrat';
   font-style: normal;
@@ -29,6 +26,8 @@ const FlatTitle = styled.h1`
   font-size: 36px;
   line-height: 142.6%;
   color: #FF6060;
+  margin-top: 0;
+  margin-bottom: 0;
 `
 
 const FlatCity = styled.h2`
@@ -52,6 +51,17 @@ const FlatTag = styled.div`
   color: #FFFFFF;
   padding: 5px 10px;
   margin-right: 10px;
+`
+
+const FlatDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+const HostDiv = styled.div`
+  display: flex;
+  gap: 20px;
 `
 
 const HostImg = styled.img`
@@ -106,16 +116,18 @@ function Flat() {
     <Body>
       <Carousel images={flat.pictures}/>
       <InfoContainer>
-        <FlatInfo>
+        <div>
           <FlatTitle> {flat.title} </FlatTitle>
           <FlatCity> {flat.location} </FlatCity>
           {flat.tags.map((tag) => (<FlatTag>{tag}</FlatTag>))}
-        </FlatInfo>
-        <div>
-          <HostName>{flat.host.name}</HostName>
-          <HostImg src={flat.host.picture} alt="host" />
-          <Star rating={flat.rating}/>
         </div>
+        <FlatDiv>
+          <HostDiv>
+            <HostName>{flat.host.name}</HostName>
+            <HostImg src={flat.host.picture} alt="host" />
+          </HostDiv>
+          <Star rating={flat.rating}/>
+        </FlatDiv>
       </InfoContainer>
       <DetailContainer>
         <Collapse label="Description">
