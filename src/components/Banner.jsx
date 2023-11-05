@@ -44,7 +44,7 @@ function Banner(props){
 
     return (
         <BannerDiv>
-            <BannerImg src={banner} alt=""/>
+            <BannerImg src={banner} alt="Banner image"/>
             <BannerShadow></BannerShadow>
             {text && <BannerText>Chez vous, partout et ailleurs</BannerText>}
         </BannerDiv>

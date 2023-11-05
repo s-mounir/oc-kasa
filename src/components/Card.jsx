@@ -41,7 +41,7 @@ const CardTitle = styled.span`
 function Card({ title, picture, id }) {
     return (
         <CardThumb>
-                <CardImage src={picture} alt="flat" />
+                <CardImage src={picture} alt="flat image" />
                 <CardShadow></CardShadow>
                 <CardTitle>{title}</CardTitle>
         </CardThumb>

@@ -157,7 +157,7 @@ function Flat() {
         <FlatDiv>
           <HostDiv>
             <HostName>{flat.host.name}</HostName>
-            <HostImg src={flat.host.picture} alt="host" />
+            <HostImg src={flat.host.picture} alt="host's profile picture" />
           </HostDiv>
           <Star rating={flat.rating}/>
         </FlatDiv>
