@@ -1,4 +1,48 @@
 import { useState } from "react"
+import styled from 'styled-components';
+
+const CarouselContainer = styled.div`
+  width: 100%;
+  height: 415px;
+  position: relative;
+`
+
+const CarouselImg = styled.img`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+    border-radius: 25px;
+`
+
+const CarouselNum = styled.p`
+    position: absolute;
+    bottom: 6%;
+    left: 49%;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+`
+
+const PreviousBtn = styled.button`
+    position: absolute;
+    left: 1%;
+    top: calc(50% - 40px);
+    font-size: 79px;
+    border: none;
+    background-color: transparent;
+`
+
+const NextBtn = styled.button`
+    position: absolute;
+    right: 1%;
+    top: calc(50% - 40px);
+    font-size: 79px;
+    border: none;
+    background-color: transparent;
+`
 
 function Carousel(props){
     const nbImages = props.images.length
@@ -23,12 +67,12 @@ function Carousel(props){
     if(nbImages <= 1) return <img src={props.images[0]} alt="flat"/>
 
     return (
-        <div>
-            <button onClick={() => previous()}> previous </button>
-            <p>{count}</p>
-            {/* <img src={props.images[0]} alt="flat"/> */}
-            <button onClick={() => next()}> next </button>
-        </div>
+        <CarouselContainer>
+            <PreviousBtn onClick={() => previous()}><svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="#FFF" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></PreviousBtn>
+            <CarouselImg src={props.images[count]} alt="flat"/>
+            <CarouselNum>{count+1}/{nbImages}</CarouselNum>
+            <NextBtn onClick={() => next()}><svg xmlns="http://www.w3.org/2000/svg" height="1em"  fill="#FFF" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></NextBtn>
+        </CarouselContainer>
     )
 }
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Card from '../components/Card';
 import Banner from '../components/Banner';
 import { useFetch } from '../utils/hooks';
+
 const Body = styled.div`
   margin: 50px 100px;
   display: flex;
