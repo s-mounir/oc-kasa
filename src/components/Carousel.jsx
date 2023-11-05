@@ -46,7 +46,6 @@ const NextBtn = styled.button`
 
 function Carousel(props){
     const nbImages = props.images.length
-    console.log(nbImages)
 
     const [count, setCount] = useState(0);
     function previous(){
