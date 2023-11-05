@@ -7,20 +7,12 @@ import Flat from './pages/Flat';
 import Header from './components/Header';
 import Error from './pages/Error';
 import Footer from './components/Footer';
-import createGlobalStyle from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  div {
-    font-family: Montserrat;
-  }
-`
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <Router>
-        <GlobalStyle/>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

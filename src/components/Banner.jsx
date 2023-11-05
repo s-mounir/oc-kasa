@@ -8,7 +8,7 @@ const BannerDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+  `
 
 const BannerImg = styled.img`
   height: 100%;

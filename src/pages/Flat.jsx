@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
 import { useFetch } from '../utils/hooks';
 import Collapse from '../components/Collapse';
@@ -11,6 +11,31 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+`
+
+const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+const Loader = styled.div`
+  padding: 10px;
+  border: 6px solid #FF6060;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: ${rotate} 1s infinite linear;
+  height: 0;
+  width: 0;
 `
 
 const InfoContainer = styled.div`
@@ -97,7 +122,12 @@ const Dropdown = styled.div`
   line-height: 142.6%;
 `
 
-const ListDropdown = styled.li`
+const ListUl = styled.ul`
+  margin: 0;
+  padding: 0;
+`
+
+const ListLi = styled.li`
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -108,7 +138,10 @@ function Flat() {
   const { data, isLoading, error } = useFetch('/flatList.json')
   const flatData = data
 
-  if (isLoading) {return <div>isLoading</div>}
+  if (isLoading) {
+    return (<LoaderWrapper>
+    <Loader />
+  </LoaderWrapper>)}
   else if(error){return <div>Il y a un problème avec les données</div>}
 
   const flat = flatData.find((data) => data.id === flatNumber);
@@ -119,7 +152,7 @@ function Flat() {
         <div>
           <FlatTitle> {flat.title} </FlatTitle>
           <FlatCity> {flat.location} </FlatCity>
-          {flat.tags.map((tag) => (<FlatTag>{tag}</FlatTag>))}
+          {flat.tags.map((tag) => (<FlatTag key={tag}>{tag}</FlatTag>))}
         </div>
         <FlatDiv>
           <HostDiv>
@@ -137,9 +170,9 @@ function Flat() {
         </Collapse>
         <Collapse label="Equipements">
           <Dropdown>
-            <ul>
-              {flat.equipments.map((equipment) => (<ListDropdown>{equipment}</ListDropdown>))}
-            </ul>
+            <ListUl>
+              {flat.equipments.map((equipment) => (<ListLi key={equipment}>{equipment}</ListLi>))}
+            </ListUl>
           </Dropdown>
         </Collapse>
       </DetailContainer>
