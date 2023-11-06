@@ -20,6 +20,10 @@ const StyledRights = styled.p`
     font-size: 24px;
     line-height: 142.6%;
     color: #FFFFFF;
+
+    @media (max-width: 768px){
+        font-size: 12px;
+  }
 `
 
 function Footer(){

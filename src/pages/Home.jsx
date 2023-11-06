@@ -6,10 +6,14 @@ import Banner from '../components/Banner';
 import { useFetch } from '../utils/hooks';
 
 const Body = styled.div`
-  margin: 50px 100px;
+  margin: 50px 10vw;
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 768px){
+    margin: 5vw;
+  }
 `
 
 const LoaderWrapper = styled.div`
@@ -40,11 +44,19 @@ const Loader = styled.div`
 const CardsContainer = styled.div`
   background-color: #F7F7F7;
   border-radius: 25px;
-  padding: 50px;
+  padding: 3vw;
 
   display: grid;
-  gap: 24px;
+  gap: 4vw;
   grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    background-color: #FFF;
+  }
 `
 
 function Home() {

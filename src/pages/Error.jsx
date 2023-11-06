@@ -7,6 +7,10 @@ const Errordiv = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    @media (max-width: 768px){
+        margin: 5vw;
+      }
 `
 
 const Error404 = styled.h1`
@@ -16,6 +20,10 @@ const Error404 = styled.h1`
     font-size: 288px;
     color: #FF6060;
     margin: 0;
+
+    @media (max-width: 768px){
+        font-size: 96px;
+      }
 `
 
 const ErrorText = styled.h2`
@@ -26,6 +34,12 @@ const ErrorText = styled.h2`
     line-height: 142.6%;
     color: #FF6060;
     margin: 0;
+    text-align: center;
+
+    @media (max-width: 768px){
+        font-size: 18px;
+        padding: 0 10vw;
+      }
 `
 
 const StyledLink = styled(Link)`
@@ -36,6 +50,11 @@ const StyledLink = styled(Link)`
     line-height: 142.6%;
     color: #FF6060;
     margin: 0;
+
+    @media (max-width: 768px){
+        font-size: 14px;
+        padding: 0 10vw;
+      }
 `
 
 function Error(){

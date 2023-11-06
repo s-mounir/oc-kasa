@@ -5,6 +5,11 @@ const CardThumb = styled.div`
     width: 22vw;
     height: 22vw;
     position: relative;
+
+    @media (max-width: 768px){
+        width: 90vw;
+        height: 60vw;
+      }
 `
 
 const CardImage = styled.img`

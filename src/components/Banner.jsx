@@ -8,6 +8,10 @@ const BannerDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px){
+    height: 111px;
+  }
   `
 
 const BannerImg = styled.img`
@@ -36,6 +40,11 @@ const BannerText = styled.p`
   font-size: 48px;
   line-height: 142.6%;
   color: #FFFFFF;
+  text-align: center;
+
+  @media (max-width: 768px){
+    font-size: 24px;
+  }
 `
 
 function Banner(props){
