@@ -11,6 +11,10 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 768px){
+    margin: 5vw;
+  }
 `
 
 const LoaderWrapper = styled.div`
@@ -42,6 +46,11 @@ const InfoContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px){
+    flex-direction: column;
+    gap: 20px;
+  }
 `
 
 const FlatTitle = styled.h1`
@@ -82,6 +91,11 @@ const FlatDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px){
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 `
 
 const HostDiv = styled.div`
@@ -108,6 +122,12 @@ const DetailContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 76px;
+
+  @media (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 `
 
 const Dropdown = styled.div`

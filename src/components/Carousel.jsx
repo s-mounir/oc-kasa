@@ -24,6 +24,10 @@ const CarouselNum = styled.p`
     font-weight: 500;
     font-size: 18px;
     color: #FFFFFF;
+
+    @media (max-width: 768px){
+        display: none;
+      }
 `
 
 const PreviousBtn = styled.button`
@@ -33,6 +37,11 @@ const PreviousBtn = styled.button`
     font-size: 79px;
     border: none;
     background-color: transparent;
+
+    @media (max-width: 768px){
+        font-size: 30px;
+        top: calc(50% - 15px);
+      }
 `
 
 const NextBtn = styled.button`
@@ -42,6 +51,11 @@ const NextBtn = styled.button`
     font-size: 79px;
     border: none;
     background-color: transparent;
+
+    @media (max-width: 768px){
+        font-size: 30px;
+        top: calc(50% - 15px);
+      }
 `
 
 function Carousel(props){
