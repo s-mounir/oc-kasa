@@ -3,10 +3,15 @@ import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
 
 const Body = styled.div`
-  margin: 50px 100px;
+  margin: 50px 10vw;
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 768px){
+    margin: 0 5vw;
+    min-height: 65vh;
+  }
 `
 
 const TextDiv = styled.div`
@@ -30,6 +35,10 @@ const DetailContainer = styled.div`
   flex-direction: column;
   padding: 30px 100px;
   gap: 30px;
+
+  @media (max-width: 768px){
+    padding: 0;
+  }
 `
 
 function About() {
