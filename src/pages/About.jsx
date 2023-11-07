@@ -38,6 +38,7 @@ const DetailContainer = styled.div`
 
   @media (max-width: 768px){
     padding: 0;
+    padding-bottom: 30px;
   }
 `
 

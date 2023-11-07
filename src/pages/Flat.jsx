@@ -85,6 +85,10 @@ const FlatTag = styled.div`
   color: #FFFFFF;
   padding: 5px 10px;
   margin-right: 10px;
+  
+  @media (max-width: 768px){
+    margin-bottom: 10px;
+  }
 `
 
 const FlatDiv = styled.div`
@@ -95,12 +99,17 @@ const FlatDiv = styled.div`
   @media (max-width: 768px){
     flex-direction: row-reverse;
     align-items: center;
+    gap: 30px;
   }
 `
 
 const HostDiv = styled.div`
   display: flex;
   gap: 20px;
+  @media (max-width: 768px){
+    align-items: flex-end;
+    gap: 10px;
+  }
 `
 
 const HostImg = styled.img`
@@ -116,6 +125,7 @@ const HostName = styled.p`
   font-size: 18px;
   line-height: 142.6%;
   color: #FF6060;
+  text-align: right;
 `
 
 const DetailContainer = styled.div`

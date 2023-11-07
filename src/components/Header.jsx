@@ -29,7 +29,11 @@ const StyledNav = styled.nav`
     gap: 57px;
 
     @media (max-width: 768px){
-        margin: 0 30px;
+        margin: 0;
+        margin-left: 30px;
+        gap: 20px;
+        width: 200px;
+        justify-content: space-between;
   }
 `
 
