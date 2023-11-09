@@ -5,6 +5,7 @@ import { useFetch } from '../utils/hooks';
 import Collapse from '../components/Collapse';
 import Carousel from '../components/Carousel';
 import Star from '../components/Star';
+import Error from '../pages/Error'
 
 const Body = styled.div`
   margin: 50px 100px;
@@ -175,6 +176,10 @@ function Flat() {
   else if(error){return <div>Il y a un problème avec les données</div>}
 
   const flat = flatData.find((data) => data.id === flatNumber);
+  if(!flat){
+    return <Error />
+  }
+
   return (
     <Body>
       <Carousel images={flat.pictures}/>

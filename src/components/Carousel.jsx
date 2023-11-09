@@ -77,7 +77,7 @@ function Carousel(props){
         }
     }
 
-    if(nbImages <= 1) return <img src={props.images[0]} alt="flat"/>
+    if(nbImages <= 1) return <CarouselContainer><CarouselImg src={props.images[0]} alt="flat"/></CarouselContainer>
 
     return (
         <CarouselContainer>
