@@ -1,0 +1,53 @@
+.Body{
+    margin: 50px 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.LoaderWrapper{
+    display: flex;
+  justify-content: center;
+}
+
+@keyframes rotate{
+    from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Loader{
+    padding: 10px;
+  border: 6px solid #FF6060;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: rotate 1s infinite linear;
+  height: 0;
+  width: 0;
+}
+
+.CardsContainer{
+    background-color: #F7F7F7;
+  border-radius: 25px;
+  padding: 3vw;
+  display: grid;
+  gap: 4vw;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+@media (max-width: 768px){
+    .Body{
+        margin: 5vw;
+    }
+    .CardsContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+        background-color: #FFF;
+    }
+}

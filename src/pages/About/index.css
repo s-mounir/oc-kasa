@@ -1,0 +1,40 @@
+.Body{
+    margin: 50px 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.TextDiv{
+    background-color: #F7F7F7;
+  border-radius: 0px 0px 5px 5px;
+  padding: 15px;
+}
+
+.Text{
+    color: #FF6060;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 142.6%;
+}
+
+.DetailContainer{
+    display: flex;
+  flex-direction: column;
+  padding: 30px 100px;
+  gap: 30px;
+}
+
+@media (max-width: 768px){
+    .Body{
+        margin: 0 5vw;
+        min-height: 65vh;
+    }
+    .DetailContainer{
+        padding: 0;
+        padding-bottom: 30px;
+    }
+}

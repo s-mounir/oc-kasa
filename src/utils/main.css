@@ -1,0 +1,12 @@
+@import "../components/Banner";
+@import "../components/Card/index.css";
+@import "../components/Carousel/index.css";
+@import "../components/Collapse/index.css";
+@import "../components/Footer/index.css";
+@import "../components/Header/index.css";
+@import "../components/Star/index.css";
+
+@import "../pages/About/index.css";
+@import "../pages/Error/index.css";
+@import "../pages/Flat/index.css";
+@import "../pages/Home/index.css";

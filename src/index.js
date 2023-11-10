@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Error from './pages/Error';
 import Footer from './components/Footer';
 
+import "./utils/main.css";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

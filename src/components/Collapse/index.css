@@ -1,0 +1,27 @@
+.TitleDiv{
+    background-color: #FF6060;
+  border-radius: 5px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+  
+.Title{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+  color: #FFFFFF;
+}
+
+.Arrow{
+    width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+  background-color: #FF6060;
+  padding: 0;
+  border: none;
+}

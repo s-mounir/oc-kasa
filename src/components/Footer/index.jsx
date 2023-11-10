@@ -1,34 +1,6 @@
-import styled from 'styled-components'
-
-const StyledFooter = styled.footer`
-    width: 100%;
-    height: 200px;
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    position: relative;
-    bottom : 0;
-`
-
-const StyledRights = styled.p`
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 142.6%;
-    color: #FFFFFF;
-
-    @media (max-width: 768px){
-        font-size: 12px;
-  }
-`
-
 function Footer(){
     return (
-        <StyledFooter>
+        <footer className="StyledFooter">
             <svg width="122" height="40" viewBox="0 0 122 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label='logo'>
                 <path d="M11.6445 20.0984L5.12785 26.762V36.1125H0V0H5.12785V20.2058L24.5709 0H30.4466L15.1699 16.2292L31.5149 36.1125H25.5324L11.6445 20.0984Z" fill="white"/>
                 <path d="M68.9054 33.2107L70.9352 29.3415C73.2855 30.9536 76.9177 32.1359 80.4431 32.1359C85.0368 32.1359 86.8529 30.7387 86.8529 28.3742C86.8529 22.2479 69.6532 27.5144 69.6532 16.6591C69.6532 11.7151 74.0333 8.49078 80.9772 8.49078C84.5026 8.49078 88.5622 9.45808 90.9124 10.9628L88.7758 14.832C86.3187 13.2198 83.648 12.6824 80.9772 12.6824C76.704 12.6824 74.5674 14.2946 74.5674 16.4441C74.5674 22.8928 91.7671 17.6264 91.7671 28.2667C91.7671 33.2107 87.2802 36.3275 80.0158 36.3275C75.6357 36.435 71.1489 35.0378 68.9054 33.2107Z" fill="white"/>
@@ -36,8 +8,8 @@ function Footer(){
                 <path d="M53.0946 28.9118V36.2203L56.1927 34.3931V27.0847L53.0946 28.9118Z" fill="white"/>
                 <path d="M61.641 19.9909L48.9282 12.5749L41.8774 8.49078L34.9335 20.6358L35.0403 32.0284L47.6462 39.4444L48.9282 38.6921V27.9443L54.5902 17.9488L60.359 21.2806V32.0284L61.641 31.2761V19.9909Z" fill="white"/>
             </svg>
-            <StyledRights>© 2020 Kasa. All rights reserved</StyledRights>
-        </StyledFooter>
+            <p className="StyledRights">© 2020 Kasa. All rights reserved</p>
+        </footer>
     )
 }
 

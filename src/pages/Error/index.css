@@ -1,0 +1,55 @@
+.Errordiv{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Error404{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 288px;
+    color: #FF6060;
+    margin: 0;
+}
+
+.ErrorText{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    color: #FF6060;
+    margin: 0;
+    text-align: center;
+}
+
+.StyledLink{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #FF6060;
+    margin: 0;
+}
+
+
+@media (max-width: 768px){
+    .Errordiv{
+        margin: 5vw;
+    }
+    .Error404{
+        font-size: 96px;
+    }
+    .ErrorText{
+        font-size: 18px;
+        padding: 0 10vw;
+    }
+    .StyledLink{
+        font-size: 14px;
+        padding: 0 10vw;
+    }
+}

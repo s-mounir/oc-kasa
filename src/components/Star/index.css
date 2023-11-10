@@ -1,0 +1,16 @@
+.StarDiv{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.StarSVG{
+    height: 24px;
+}
+    
+
+@media (max-width: 768px){
+    .StarSVG{
+        height: 18px;
+    }
+}

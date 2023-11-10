@@ -1,0 +1,51 @@
+.StyledHeader{
+    height: 120px;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.StyledNav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 57px;
+}
+
+.StyledLinkNav{
+    color: #FF6060;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    text-decoration: none;
+}
+ 
+.StyledLinkNav.active{
+    border-bottom: solid 2px #ff6060;
+}
+
+@media (max-width: 768px){
+    .StyledHeader{
+        margin: 0 5vw;
+    }
+    .StyledLogo{
+        height: 47px;
+    }
+    .StyledNav{
+        margin: 0;
+        margin-left: 30px;
+        margin-right: 10px;
+        gap: 20px;
+        width: 200px;
+        justify-content: space-between;
+    }
+    .StyledLinkNav{
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,154 @@
+.Body{
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.LoaderWrapper{
+    display: flex;
+    justify-content: center;
+}
+  
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.Loader{
+    padding: 10px;
+  border: 6px solid #FF6060;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: rotate 1s infinite linear;
+  height: 0;
+  width: 0;
+}
+
+.InfoContainer{
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.FlatTitle{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 142.6%;
+  color: #FF6060;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.FlatCity{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #FF6060;
+}
+
+.FlatTag{
+    display: inline-block;
+  background: #FF6060;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 142.6%;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.FlatDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.HostDiv{
+    display: flex;
+  gap: 20px;
+}
+
+.HostImg{
+    height: 64px;
+  width: 64px;
+  border-radius: 32px;
+}
+
+.HostName{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #FF6060;
+  text-align: right;
+}
+
+.FlatDetailContainer{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 76px;
+}
+
+.Dropdown{
+    background-color: #F7F7F7;
+  border-radius: 0px 0px 5px 5px;
+  padding: 15px;
+  color: #FF6060;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 142.6%;
+}
+
+.ListUl{
+    margin: 0;
+  padding: 0;
+}
+
+.ListLi{
+    list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+  
+
+@media (max-width: 768px){
+    .Body{
+        margin: 5vw;
+    }
+    .InfoContainer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .FlatTag{
+        margin-bottom: 10px;
+    }
+    .FlatDiv{
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 30px;
+    }
+    .HostDiv{
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .DetailContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
